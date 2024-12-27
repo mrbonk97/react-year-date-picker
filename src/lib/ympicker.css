@@ -1,0 +1,41 @@
+.ympicker-calendar {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 256px;
+  width: 256px;
+  border: 1px solid rgb(153, 153, 153);
+}
+
+.ympicker-calendar > ul {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  overflow-y: scroll;
+}
+
+.ympicker-calendar > ul > li {
+  box-sizing: border-box;
+  user-select: none;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  border: 1px solid rgb(153, 153, 153);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 150ms;
+  scroll-margin-top: 2.5px;
+}
+
+.ympicker-calendar > ul > li:hover {
+  cursor: pointer;
+  background-color: violet;
+}
+
+.ympicker-calendar > ul > li[aria-selected="true"] {
+  background-color: violet;
+}
